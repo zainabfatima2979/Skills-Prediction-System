@@ -1,0 +1,113 @@
+.cd-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(17, 24, 39, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: cd-fade-in 0.15s ease-out;
+}
+
+@keyframes cd-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.cd-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 28px;
+  width: 360px;
+  max-width: calc(100vw - 32px);
+  box-shadow: 0 20px 40px rgba(17, 24, 39, 0.18);
+  text-align: center;
+  animation: cd-pop-in 0.15s ease-out;
+}
+
+@keyframes cd-pop-in {
+  from { opacity: 0; transform: scale(0.96) translateY(4px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.cd-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+}
+
+.cd-icon svg {
+  width: 26px;
+  height: 26px;
+}
+
+.cd-icon-danger {
+  background: #FEE2E2;
+  color: #B91C1C;
+}
+
+.cd-icon-default {
+  background: var(--color-accent-soft);
+  color: var(--color-accent-dark);
+}
+
+.cd-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  color: var(--color-text);
+}
+
+.cd-message {
+  font-size: 13.5px;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin: 0 0 22px 0;
+}
+
+.cd-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.cd-btn {
+  flex: 1;
+  padding: 10px;
+  border-radius: 7px;
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+}
+
+.cd-btn-cancel {
+  background: #fff;
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+}
+
+.cd-btn-cancel:hover {
+  background: var(--color-bg);
+}
+
+.cd-btn-confirm {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+.cd-btn-confirm:hover {
+  background: var(--color-accent-dark);
+}
+
+.cd-btn-danger {
+  background: #DC2626;
+  color: #fff;
+}
+
+.cd-btn-danger:hover {
+  background: #B91C1C;
+}

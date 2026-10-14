@@ -1,0 +1,686 @@
+.mgr-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.mgr-sidebar {
+  width: 240px;
+  background: #0E7C7B;
+  border-right: 1px solid #0B6362;
+  color: rgba(255, 255, 255, 0.75);
+  display: flex;
+  flex-direction: column;
+  padding: 28px 16px;
+  flex-shrink: 0;
+}
+
+.mgr-brand {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 2px;
+  padding: 0 8px;
+}
+
+.mgr-brand-sub {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 32px;
+  padding: 0 8px;
+}
+
+.mgr-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+}
+
+.mgr-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 12px;
+  border-radius: 6px;
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  border-left: 3px solid transparent;
+}
+
+.mgr-nav-link:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+}
+
+.mgr-nav-link.active {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  border-left: 3px solid #ffffff;
+  font-weight: 600;
+}
+
+.mgr-nav-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.mgr-nav-count {
+  margin-left: auto;
+  background: rgba(255, 255, 255, 0.25);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  min-width: 18px;
+  height: 18px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5px;
+}
+
+.mgr-nav-link.active .mgr-nav-count {
+  background: #0E7C7B;
+}
+
+.mgr-sidebar-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 16px 8px 0;
+  margin-top: 16px;
+}
+
+.mgr-user-name {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.mgr-user-role {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 12px;
+}
+
+.mgr-logout-btn {
+  width: 100%;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.85);
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.mgr-logout-btn:hover {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.mgr-main {
+  flex: 1;
+  padding: 36px 40px;
+  max-width: 1000px;
+}
+
+.mgr-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.mgr-subtitle {
+  color: var(--color-text-muted);
+  font-size: 14px;
+  margin: 4px 0 28px 0;
+}
+
+/* --- Stat cards --- */
+.mgr-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.mgr-stat-card {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.mgr-stat-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.mgr-stat-icon svg {
+  width: 21px;
+  height: 21px;
+}
+
+.mgr-stat-number {
+  font-size: 24px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+}
+
+.mgr-stat-label {
+  font-size: 12.5px;
+  color: var(--color-text-muted);
+  margin-top: 2px;
+}
+
+/* --- Selected employee summary card --- */
+.mgr-selected-employee {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--color-accent-soft);
+  border: 1px solid var(--color-accent);
+  border-radius: 10px;
+  padding: 14px 18px;
+  margin-top: 18px;
+  margin-bottom: 4px;
+}
+
+.mgr-selected-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 700;
+  flex-shrink: 0;
+  background: #fff;
+  color: var(--color-accent-dark);
+}
+
+.mgr-selected-name {
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--color-text);
+}
+
+.mgr-selected-meta {
+  font-size: 12.5px;
+  color: var(--color-text-muted);
+}
+
+.mgr-selected-progress {
+  margin-left: auto;
+  text-align: right;
+  font-size: 12.5px;
+  color: var(--color-accent-dark);
+  font-weight: 600;
+}
+
+/* --- Employee profile card (shown before rating) --- */
+.mgr-profile-card {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 18px 20px;
+  margin-top: 16px;
+}
+
+.mgr-profile-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-text-muted);
+  margin: 0 0 14px 0;
+  text-transform: none;
+}
+
+.mgr-profile-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 24px;
+}
+
+.mgr-profile-item.full {
+  grid-column: 1 / -1;
+}
+
+.mgr-profile-label {
+  font-size: 11.5px;
+  color: var(--color-text-soft);
+  margin-bottom: 3px;
+}
+
+.mgr-profile-value {
+  font-size: 13.5px;
+  color: var(--color-text);
+  line-height: 1.5;
+}
+
+/* --- Empty state --- */
+.mgr-empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 48px 20px;
+  color: var(--color-text-soft);
+}
+
+.mgr-empty-state-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--color-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+  color: var(--color-text-soft);
+}
+
+.mgr-empty-state-icon svg {
+  width: 26px;
+  height: 26px;
+}
+
+.mgr-empty-state-title {
+  font-size: 14.5px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  margin-bottom: 4px;
+}
+
+.mgr-empty-state-text {
+  font-size: 13px;
+  max-width: 280px;
+}
+
+.mgr-blocked-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: 16px;
+  background: #FEF2F2;
+  border: 1px solid #FECACA;
+  border-radius: 10px;
+}
+
+.mgr-blocked-state .mgr-empty-state-title {
+  color: #B91C1C;
+}
+
+.mgr-blocked-state .mgr-empty-state-text {
+  color: #991B1B;
+  max-width: 340px;
+}
+
+/* --- Custom select with search feel --- */
+.mgr-select-wrap {
+  position: relative;
+}
+
+.mgr-select-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-text-soft);
+  pointer-events: none;
+}
+
+.mgr-select-with-icon {
+  padding-left: 38px;
+}
+
+.mgr-panel {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 24px;
+  margin-bottom: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.mgr-panel-accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+}
+
+.mgr-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.mgr-panel-title {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.mgr-count-badge {
+  display: inline-block;
+  background: var(--color-bg);
+  color: var(--color-text-muted);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 2px 9px;
+  border-radius: 20px;
+  margin-left: 6px;
+}
+
+.mgr-search-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 7px 12px;
+  color: var(--color-text-soft);
+  width: 280px;
+}
+
+.mgr-search-input {
+  border: none;
+  outline: none;
+  font-size: 13px;
+  flex: 1;
+  color: var(--color-text);
+  font-family: inherit;
+}
+
+/* --- Table --- */
+.mgr-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.mgr-table th {
+  text-align: left;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: var(--color-text-muted);
+  border-bottom: 1px solid var(--color-border);
+  font-weight: 600;
+}
+
+.mgr-table td {
+  padding: 12px;
+  font-size: 14px;
+  border-bottom: 1px solid #F0F1F3;
+  vertical-align: middle;
+}
+
+.mgr-table tr:hover td {
+  background: var(--color-bg);
+}
+
+.mgr-empty {
+  color: var(--color-text-soft);
+  font-size: 14px;
+  padding: 12px 0;
+}
+
+/* --- Employee cell --- */
+.mgr-employee-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mgr-avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.mgr-employee-name {
+  font-weight: 500;
+}
+
+.mgr-employee-id {
+  font-size: 12px;
+  color: var(--color-text-soft);
+}
+
+.mgr-dept-chip {
+  background: var(--color-bg);
+  color: var(--color-text-muted);
+  font-size: 12px;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+.mgr-skill-chip {
+  font-size: 12.5px;
+  font-weight: 600;
+  padding: 4px 11px;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+/* --- Progress bar for pending/completed lists --- */
+.mgr-progress-track {
+  width: 90px;
+  height: 7px;
+  background: var(--color-bg);
+  border-radius: 4px;
+  overflow: hidden;
+  display: inline-block;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.mgr-progress-fill {
+  height: 100%;
+  border-radius: 4px;
+}
+
+.mgr-rate-btn {
+  background: var(--color-accent);
+  color: #fff;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.mgr-rate-btn:hover {
+  background: var(--color-accent-dark);
+}
+
+.mgr-rating-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--color-accent-soft);
+  color: var(--color-accent-dark);
+  font-weight: 700;
+  font-size: 13px;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+.mgr-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-text-muted);
+  text-decoration: none;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+.mgr-back-link:hover {
+  color: var(--color-text);
+}
+
+/* --- Rate Employee form-specific --- */
+.mgr-select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: inherit;
+  background: #fff;
+}
+
+.mgr-skill-card {
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 14px;
+}
+
+.mgr-skill-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.mgr-skill-name {
+  font-weight: 600;
+  font-size: 14.5px;
+}
+
+.mgr-required-tag {
+  font-size: 12px;
+  color: var(--color-text-soft);
+}
+
+.mgr-field-label {
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  margin-bottom: 5px;
+  display: block;
+}
+
+.mgr-field-input {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  font-size: 13.5px;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.mgr-field-row {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 14px;
+}
+
+.mgr-submit-btn {
+  background: var(--color-accent);
+  color: #fff;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.mgr-submit-btn:hover {
+  background: var(--color-accent-dark);
+}
+
+.mgr-submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.mgr-form-message {
+  font-size: 13px;
+  margin-top: 14px;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+.mgr-form-message.success {
+  background: #DCFCE7;
+  color: #166534;
+}
+
+.mgr-form-message.error {
+  background: #FEE2E2;
+  color: #B91C1C;
+}
+
+@media (max-width: 880px) {
+  .mgr-layout {
+    flex-direction: column;
+  }
+  .mgr-sidebar {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+  }
+  .mgr-nav {
+    flex-direction: row;
+    overflow-x: auto;
+  }
+  .mgr-sidebar-footer {
+    display: none;
+  }
+  .mgr-main {
+    padding: 24px 20px;
+  }
+  .mgr-search-box {
+    width: 100%;
+  }
+  .mgr-panel-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .mgr-stat-grid {
+    grid-template-columns: 1fr;
+  }
+  .mgr-profile-grid {
+    grid-template-columns: 1fr;
+  }
+}
